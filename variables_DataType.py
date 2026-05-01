@@ -66,3 +66,6 @@ num1 =  float(input("Enter a number 1 :"))
 num2 = float(input("Enter number 2 : "))
 avrg = (num1+num2)/ 2
 print("Avrg is : ", avrg)
+
+
+name = "humaira"
