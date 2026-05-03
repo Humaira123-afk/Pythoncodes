@@ -1,0 +1,175 @@
+def add (a, b): #func def  
+    return a + b 
+print("Sum is: ",add(4,6)) #func call , func(a,b) arguments 
+
+
+def Hello():
+    print("Hello world!")
+
+# Hello()  # ye func na koi para le rha na koi val de rha jo hai bas wahi print kr rha tu agr iska output dekhen ge var mai store kr k tu None aga
+print(Hello()) #output aega pehle func call hoga and jo prompt dia wa hai wo then None print hoga
+
+
+def avrg (num1, num2, num3):
+    avg = (num1+num2+num3) / 3
+    print(avg)
+
+avrg (1,2,3)
+
+
+#user se aagr input le k uska avrg krwana hai tu we use input function
+
+# def avrg (num1, num2, num3):
+#     avg = (num1+num2+num3) / 3
+#     print("Average is: ",avg)
+
+# num1 = int(input("Enter value 1: "))
+# num2 = int(input("Enter value 2: "))
+# num3 = int(input("Enter value 3: "))
+
+# avrg(num1, num2,num3)
+
+#built in func
+#print aik func hai js mai builtin func hai seperater " " ye do values k beech mai gap deta automatically
+
+# #nam k beech khudi gap aya ga
+# print("Humaira","Bibi")
+# print("Baksh")   #dono prints k beech mai khudi next line ka func define hai
+# #agr mjhy ye next line khtm krni hai dono mai tu
+# print("Humaira" , end = " ") # ab humaira and baksh same line mai hain aur beech mai space bhi included hai
+# print("Baksh")
+ 
+
+# #more built in func range, type, len
+# #userbuilt => userdefine => hum khud banate hain
+
+# #agr hum koi value pass nahi krte in parameters definition k baad bhi mtlb no arguments tu error aega isko khtm krne k liye we can use default values =>wo val jo usi time use hn jab koii aur val pass na ki jae
+
+# #hmne aik hi line mai pehle hi val pass krdi hain arguments ki func mai alg se arguments pass nahi kre 
+# def Sums(a = 3, b = 5):
+#     print(a+b)
+# Sums ()
+
+# #yhn hmne a ki val arg mai pass ki hai b ko default di hai we can do this also vise versa. Jb bhi default val deni hoti hai we do this from last 
+def product(b , a = 5):
+    print(a*b)
+product (b=4)
+
+# #PRACTICE::
+
+# #aik list dein ge and we have to print it's length:
+
+cities = ["Karachi" , "Lahore", "Multan"]
+fruits = ["mango", "banana", "pineapple", "kevi", "apple"]
+def cal_list_len(list): #we said k hum aik arg pass krein ge 
+    print("Length of a list is: ",len(list)) #uski length print krdena
+cal_list_len(cities) #3 output q k 3 thin cities
+cal_list_len(fruits) #5 bcz 5 fruits thy 
+
+#aik list k sare elements print krne ha using func aik hi single line mai 
+cities = ["Karachi" , "Lahore", "Multan"]
+def element_print (list):
+    print(list)
+element_print(cities)
+ 
+#  #we can also do this :
+cities = ["Karachi" , "Lahore", "Multan"]
+def element_print (list):
+    for i in list:
+        print(i , end = " ")
+element_print (cities)
+print("")
+#factorial of n find krna
+
+
+def factorial (n):
+    fact = 1
+    for i in range (1, n+1):
+        #1*1->1*2->2*3->6*4
+        fact *= i #i mai values hain 1 to n tk ki 
+    return fact # yhn return krna zrooi hai wrna None aega
+
+n = int(input("Enter a number: "))
+print("Factorial: ", factorial(n))
+
+
+# #while loop:
+
+def fact_while(n):
+    i = 1
+    fact = 1
+    while i <= n:
+     fact *= i
+     i+=1
+    print(fact)
+n = int(input("Enter number: "))
+fact_while(n)
+
+# #USD ko Pakistani RS mai convert krana hai 
+
+def converter(usd_val):
+    Pak_rs =  usd_val * 300
+    print("USD", usd_val, " = ", "PKR" ,Pak_rs)
+
+converter (2)
+
+# #h.w : Even ha ya odd
+
+
+def decide(number):
+    if(number %2 == 0):
+        return "Even"
+    else :
+        return "odd"
+
+number = int(input("Enter a number:"))
+result = decide (number)
+print(result)
+
+#Recursion : is mai func khudi ko call kar rha hota hai like loops hi loop and recursion interrelated 
+
+#  def show (n):
+#     if(n==0): #base case end kahan krna hai???
+#         return
+#     print(n)
+#     show(n-1) #working kia hrohi hai
+# show(5) 
+
+# internally fun , recursion k liye call stack hota hai jo aik jaga leta hai stack mai jb jahn aik new iteration hui whn new layer banegi aur sab kam start se start hoga
+
+#hr layer apna kam kr k val return kregi and then hat jaegi
+
+#4 fact => 1*2*3*4 
+
+def fact (n):
+    if (n==1 or n ==0): #agr 0 ya 1 ajae fact mai tou return else phr 5! = (n-4)(n-3)(n-2)(n-1) * 5 , 
+        return 1 
+    return fact (n-1) * n
+
+print(fact(5))
+
+#Practice:
+
+#recursion of Sum 
+
+def sum (n):
+  if (n==0):
+      return 0 #not a natural number to js 0 return
+  return sum (n-1) + n  (old layer + jo val boli hai wo add)
+add = sum(5)
+print(add)
+  
+
+#list k elements ko recursively
+
+def print_list (list, ind):
+     ind = 0
+     if(ind == len(list)):
+         return 
+     print(list[ind])
+     print(list, ind+1)
+
+fruits = ["apple", "mango", "banana", "grapes"]
+print(fruits)
+
+
