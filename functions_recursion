@@ -155,7 +155,7 @@ print(fact(5))
 def sum (n):
   if (n==0):
       return 0 #not a natural number to js 0 return
-  return sum (n-1) + n  (old layer + jo val boli hai wo add)
+  return sum (n-1) + n  #(old layer + jo val boli hai wo add)
 add = sum(5)
 print(add)
   
