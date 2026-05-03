@@ -55,7 +55,7 @@ def product(b , a = 5):
     print(a*b)
 product (b=4)
 
-# #PRACTICE::
+# #PRACTICE:
 
 # #aik list dein ge and we have to print it's length:
 
