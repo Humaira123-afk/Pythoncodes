@@ -1,0 +1,6 @@
+Hi everyone 
+ We are learning File I/O 
+using Java 
+ like programming in Java
+
+ 
