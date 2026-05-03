@@ -172,4 +172,9 @@ def print_list (list, ind):
 fruits = ["apple", "mango", "banana", "grapes"]
 print(fruits)
 
-
+#recursion of power
+def power (base, exp):
+    if (exp == 0):
+        return 1
+    return power (base, exp-1) * base
+print(power(2,3))
