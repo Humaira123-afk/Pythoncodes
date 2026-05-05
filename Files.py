@@ -103,30 +103,87 @@
 # import os
 # os.remove("practice.txt")
 #new file create krna hai 
-from os import read
+# from os import read
 
 
-with open("practice.txt", "w") as new_file:
-   new_file.write("Hi everyone \n We are learning File I/O \n")
-   new_file.write("using Java \n like programming in Java")
+# with open("practice.txt", "w") as new_file:
+#    new_file.write("Hi everyone \n We are learning File I/O \n")
+#    new_file.write("using Java \n like programming in Java")
 
-#ab new file mai jahn jahn JAVA hai wahn python krdo replace krne k liye read and overwrite them
+# #ab new file mai jahn jahn JAVA hai wahn python krdo replace krne k liye read and overwrite them
+
+# # with open("practice.txt", "r") as f:
+# #    data = f.read()
+# # new_data = data.replace("Java", "Python")
+# # print(new_data)
+
+
+# #search k learning word hai us mai ya nahi
+
+# # def word_search(word):
+# #  with open("practice.txt", "r") as f:
+# #    data = f.read()
+# #    if(data.find(word) != -1):
+# #       print("Found")
+# #    else:
+# #       print("not found")
+# # word_search("notepads")
+
+
+# with open("practice.txt", "r") as f:
+#     data = f.read()
+#     replaced =  data.replace("Java", "Python")
+# print(replaced)
+
+
+# #search a word in file and find the line number where it is found
+# def search_word(word):
+ 
+#    with open("practice.txt", "r") as f:
+#       data =  f.read()
+#       if(data.find(word) != -1):
+#          print("Data found at index: ",data.find(word))
+#       else :
+#          print("Not Found")
+
+# search_word("Hi")
+
+# #line konsi hai word ki
+
+# def check_line(word):
+#     line_no = 1
+#     found = False
+
+#     with open("practice.txt", "r") as f:
+#         for line in f:
+#             if word in line:
+#                 print("Data found at line:", line_no)
+#                 found = True
+
+#             line_no += 1
+
+#     if not found:
+#         print("Not found")
+
+# check_line("nothing")
+
+#file mai numbers dalo and check if even or odd and total count:
+
+with open("practice.txt", "w") as f:
+    data = f.write("1,2,3,4,56,78,90,100,13")
 
 with open("practice.txt", "r") as f:
-   data = f.read()
-new_data = data.replace("Java", "Python")
-print(new_data)
-
-
-#search k learning word hai us mai ya nahi
-
-def loop(word):
-  with open("practice.txt", "r") as file:
-   data = file.read()
-   if word in data:
-      print("Found")
-   else:
-      print("Not found")
-loop("notebook")
-
+     data = f.read()
+     print(data)
+     
+count = 0
+numbers = data.split(",")
+for i in numbers:
+        nums = int(i)
+        if (nums %2 ==0):
+         print("Even: " , nums)
+         count += 1
+        else :
+         print("odd: " , nums)
+print("Total even numbers: ", count)
 
