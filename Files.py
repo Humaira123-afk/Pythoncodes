@@ -209,3 +209,23 @@ with open("practice.txt", "r") as f:
          else :
            print("Odd: ", nums)
 
+
+with open("practice.txt", "r") as f:
+    data = f.read()
+    print(data)
+
+count_even = 0
+count_odd = 0
+nums = data.split(",")
+ 
+for i in nums:
+    if(int(i)%2==0):
+        print("Even ", i)
+        count_even+=1
+    else:
+        print("Odd", i)
+        count_odd+=1
+print ("Count of even :",count_even) 
+print ("Count of odd :",count_odd) 
+
+
