@@ -175,15 +175,37 @@ with open("practice.txt", "w") as f:
 with open("practice.txt", "r") as f:
      data = f.read()
      print(data)
-     
+
 count = 0
 numbers = data.split(",")
 for i in numbers:
-        nums = int(i)
-        if (nums %2 ==0):
-         print("Even: " , nums)
-         count += 1
-        else :
-         print("odd: " , nums)
+   nums = int(i)
+   if (nums %2 ==0):
+      print("Even: " , nums)
+      count += 1
+   else :
+      print("odd: " , nums)
 print("Total even numbers: ", count)
+
+
+#practice of even odd
+
+with open("practice.txt", "w") as f:
+    data = f.write("1,2,3,4,56,78,90,100,13")
+    f.close()
+
+with open("practice.txt", "r") as f: 
+     
+     data = f.read()
+     print(data)
+    
+     numbers = data.split(",")
+     count = 0  
+     for i in numbers:
+         nums = int(i) 
+         if(nums %2 ==0 ):
+           print("Even: ", nums)
+           count += 1
+         else :
+           print("Odd: ", nums)
 
