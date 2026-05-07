@@ -152,7 +152,6 @@ print("Grade A occurs",grade.count("A"),"times")    #A kitni baar aya hai uska c
 # print(grade_lis)
 
 
-
 # From D -> A
 grade_lis = ["C-", "A"  ,"B", "A+", "C-", "A" , "A" , "B-", "D"]
 print(grade_lis.sort(reverse= True))
